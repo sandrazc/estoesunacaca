@@ -1,0 +1,121 @@
+
+/*IMAGEN CABECERA*/
+.ImagenCabecera img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 50vh; /* Ocupa hasta la mitad del alto de la pantalla */
+    display: block;
+}
+
+/*TEXTO CABECERA*/
+.texto-cabecera {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px #666666;
+  font-size: 25px;
+}
+
+/*SEGUNDO TEXTO CABECERA*/
+.texto-cabecera2{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #666666;
+
+  font-size: clamp(14px, 4vw, 20px);
+}
+
+/*TEXTO CABECERA PARA MÓVIL*/
+@media (max-width: 768px) {
+  .texto-cabecera {
+    white-space: normal;
+    width: 95vw;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.2;
+    top: 4%; 
+  }
+}
+
+/*SEGUNDO TEXTO CABECERA PARA MÓVIL*/
+@media (max-width: 768px) {
+  .texto-cabecera2 {
+    position: static;   
+    transform: none;
+    width: 90vw;
+    margin: 16px auto 0;
+    color: #666666;    
+    text-shadow: none; 
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+}
+
+
+/*ICONOS*/
+.icono-movil{
+	width: 180px; /* Ajusta el tamaño del icono */
+        cursor: pointer; /* Cambia el cursor a mano para indicar interactividad */
+}
+.icono-pc{
+	width: 250px; /* Ajusta el tamaño del icono */
+        cursor: pointer; /* Cambia el cursor a mano para indicar interactividad */
+}
+.icono-tablet{
+	width: 300px; /* Ajusta el tamaño del icono */
+        cursor: pointer; /* Cambia el cursor a mano para indicar interactividad */
+}
+.icono-tv{
+	width: 350px; /* Ajusta el tamaño del icono */
+        cursor: pointer; /* Cambia el cursor a mano para indicar interactividad */
+}
+
+/*CONTENEDOR DE LOS ICONOS*/
+.iconos {
+    display: flex;           /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente (opcional) */
+    gap: 40px;               /* Espacio entre iconos */
+    flex-wrap: wrap;
+}
+
+
+/*CONTENEDOR DE ICONOS EN MÓVILES*/
+@media (max-width: 768px) {
+    .iconos {
+        flex-direction: column; /* Cambia a vertical */
+        gap: 20px;              /* Ajusta espacio entre iconos si quieres */
+    }
+}
+
+/*TEXTO DE LOS ICONOS*/
+.icono-item {
+    display: flex;
+    flex-direction: column; /* coloca el texto debajo de la imagen */
+    align-items: center;    /* centra la imagen y el texto */
+    text-align: center;
+}
+.icono-item p {
+    margin-top: 10px; /* espacio entre imagen y texto */
+    font-size: 18px; 
+    color: #666666;
+}
+
+.icono-movil,
+.icono-pc,
+.icono-tablet,
+.icono-tv {
+    height: 200px; /* Ajusta según necesites */
+    width: auto;   /* Mantiene la proporción */
+}
