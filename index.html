@@ -9,17 +9,20 @@
 <header>
 <div class="ImagenCabecera">
 <img src="fondo-interrogaciones3.jpg" alt="fondoCabecera">
+<div id="titulo-seleccion">
 <div class="texto-cabecera">
 En esta web te ayudaremos con temas relacionados con la tecnología. <br>
 </div>
 <div class="texto-cabecera2">
 Desde configurar un dispositivo, mandar una captura, suscripciones a plataformas de terceros, mandar un correo y muchas cosas más.
 </div>
-<div id="titulo-seleccion">
+
   <h1>
     Empecemos por lo primero. ¿Qué dispositivo vas a utilizar?
   </h1>
 </div>
+
+
 </header>
 <div id="seleccion-dispositivo">
 <div class="iconos">
@@ -36,7 +39,7 @@ Desde configurar un dispositivo, mandar una captura, suscripciones a plataformas
 <div class="icono-item">
 <img src="imagen-pc.jpg" alt="Buscar pc" 
          class="icono-pc" 
-         onclick="toogleFiltro()">
+         onclick="mostrarSeccion('pc')">
 
 <p>Ordenador</p>
 </div>
@@ -45,7 +48,7 @@ Desde configurar un dispositivo, mandar una captura, suscripciones a plataformas
 <div class="icono-item">
 <img src="imagen-tablet.jpg" alt="Buscar tablet" 
          class="icono-tablet" 
-         onclick="toogleFiltro()">
+         onclick="mostrarSeccion('tablet')">
 
 <p>Tablet</p>
 </div>
@@ -54,7 +57,7 @@ Desde configurar un dispositivo, mandar una captura, suscripciones a plataformas
 <div class="icono-item">
 <img src="imagen-tv.jpg" alt="Buscar tv" 
          class="icono-tv" 
-         onclick="toogleFiltro()">
+         onclick="mostrarSeccion('tv')">
 
 <p>Televisor</p>
 </div>
@@ -63,9 +66,12 @@ Desde configurar un dispositivo, mandar una captura, suscripciones a plataformas
 </div>
 
 
-
+<div class = "ImagenCabecera2">
 <div id = "moviles" class= "filtro">
-<h3>Marcas de móviles:</h3>
+<div id = "mostrar-texto" class="mostrar-texto">
+SELECCIONA LA MARCA
+</div>
+<h3 style="left: 50%; transform: translate(-50%, -50%); font-size: 37px; color: #9e9e9e; position: absolute; top: 48%; text-align: center; width: 100%;">Marcas de móviles:</h3>
 <ul>
 <li>Samsung</li>
 <li>Xiaomi</li>
@@ -76,6 +82,50 @@ Desde configurar un dispositivo, mandar una captura, suscripciones a plataformas
 <button onclick="location.reload()">⬅ Volver</button>
 </div>
 
+<div id = "pc" class= "filtro">
+<div id = "mostrar-texto" class="mostrar-texto">
+SELECCIONA LA MARCA
+</div>
+<h3 style="left: 50%; transform: translate(-50%, -50%); font-size: 37px; color: #9e9e9e; position: absolute; top: 48%; text-align: center; width: 100%;">Marcas de ordenadores:</h3>
+<ul>
+<li>Samsung</li>
+<li>Hp</li>
+<li>Lenovo</li>
+<li>Nexus</li>
+</ul>
+<button onclick="location.reload()">⬅ Volver</button>
+</div>
+
+<div id = "tablet" class= "filtro">
+<div id = "mostrar-texto" class="mostrar-texto">
+SELECCIONA LA MARCA
+</div>
+<h3 style="left: 50%; transform: translate(-50%, -50%); font-size: 37px; color: #9e9e9e; position: absolute; top: 48%; text-align: center; width: 100%;">Marcas de tablet:</h3>
+<ul>
+<li>Samsung</li>
+<li>Xiaomi</li>
+<li>Lg</li>
+<li>Honor</li>
+<li>Oppo</li>
+</ul>
+<button onclick="location.reload()">⬅ Volver</button>
+</div>
+
+<div id = "tv" class= "filtro">
+<div id = "mostrar-texto" class="mostrar-texto">
+SELECCIONA LA MARCA
+</div>
+<h3 style="left: 50%; transform: translate(-50%, -50%); font-size: 37px; color: #9e9e9e; position: absolute; top: 48%; text-align: center; width: 100%;">Marcas de televisores:</h3>
+<ul>
+<li>Samsung</li>
+<li>Xiaomi</li>
+<li>Lg</li>
+<li>Nevir</li>
+<li>Ok</li>
+</ul>
+<button onclick="location.reload()">⬅ Volver</button>
+</div>
+</div>
 
 
 <script>
@@ -84,13 +134,16 @@ function mostrarSeccion(id) {
    // Oculta título
   document.getElementById('titulo-seleccion').style.display = 'none';
 
+  //Mostrar texto (selecciona la marca)
+  document.getElementById('mostrar-texto').style.display = 'block';
+
   // Oculta iconos
   document.getElementById('seleccion-dispositivo').style.display = 'none';
 
   // Oculta todas las secciones
-  document.querySelectorAll('.seccion').forEach(sec => {
-    sec.style.display = 'none';
-  });
+ // document.querySelectorAll('.seccion').forEach(sec => {
+  //  sec.style.display = 'none';
+  //});
 
   // Muestra la sección elegida
   document.getElementById(id).style.display = 'block';

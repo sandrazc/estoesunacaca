@@ -22,6 +22,28 @@
   font-size: 25px;
 }
 
+/*MOSTRAR TEXTO "SELECCIONA LA MARCA"*/
+.mostrar-texto {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px #666666;
+  font-size: 40px;
+}
+
+/*IMAGEN CABECERA EN LA SELECCIÓN DE MARCAS*/
+.ImagenCabecera2 img{
+    width: 100%;
+    max-height: 20vh; /* Altura más corta que la anterior (ej: 20% o 30%) */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    display: block;
+    position: relative;
+}
+
 /*SEGUNDO TEXTO CABECERA*/
 .texto-cabecera2{
   position: absolute;
