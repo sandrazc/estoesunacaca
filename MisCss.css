@@ -22,18 +22,18 @@
   font-size: 25px;
 }
 
-/*MOSTRAR TEXTO "SELECCIONA LA MARCA"*/
-.mostrar-texto {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  color: #FFFFFF;
-  font-weight: bold;
-  text-shadow: 3px 3px 4px #666666;
-  font-size: 40px;
+/*TEXTO CABECERA PARA MÓVIL*/
+@media (max-width: 768px) {
+  .texto-cabecera {
+    white-space: normal;
+    width: 95vw;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.2;
+    top: 4%; 
+  }
 }
+
 
 /*IMAGEN CABECERA EN LA SELECCIÓN DE MARCAS*/
 .ImagenCabecera2 img{
@@ -57,17 +57,7 @@
   font-size: clamp(14px, 4vw, 20px);
 }
 
-/*TEXTO CABECERA PARA MÓVIL*/
-@media (max-width: 768px) {
-  .texto-cabecera {
-    white-space: normal;
-    width: 95vw;
-    text-align: center;
-    font-size: 17px;
-    line-height: 1.2;
-    top: 4%; 
-  }
-}
+
 
 /*SEGUNDO TEXTO CABECERA PARA MÓVIL*/
 @media (max-width: 768px) {
@@ -81,6 +71,56 @@
     text-align: center;
     font-size: 16px;
     line-height: 1.35;
+  }
+}
+
+/*MOSTRAR TEXTO "SELECCIONA LA MARCA"*/
+.mostrar-texto {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px #666666;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .mostrar-texto {
+    white-space: normal;
+    width: 95vw;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.2;
+    top: 4%;
+  }
+}
+
+/*MARCAS DE*/
+.marcasde {
+   position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    font-size: 37px;
+    color: #9e9e9e;
+  }
+
+
+@media (max-width: 768px){
+.marcasde {
+   white-space: normal;
+   width: 100%;
+   text-align: center;
+   font-size: 17px;
+   line-height: 1.2;
+   margin-top: -10%;
+   position: static;   /*si lo quieres normal en móvil */
+   transform: none;
   }
 }
 
@@ -140,6 +180,11 @@
 .icono-tv {
     height: 200px; /* Ajusta según necesites */
     width: auto;   /* Mantiene la proporción */
+}
+
+.imgmarca {
+   height: 200px !important;
+   width: 200px !important;
 }
 
 .filtro{
